@@ -63,11 +63,23 @@
 // }
 
 
+// fn main(){
+//     let number:i8=12;
+//     if number <10{
+//         print!("Value {} is less than 10",number)
+//     }else{
+//         print!("Value {} is greater than 10",number)
+//     }
+// }
+
+
 fn main(){
-    let number:i8=12;
-    if number <10{
-        print!("Value {} is less than 10",number)
-    }else{
-        print!("Value {} is greater than 10",number)
-    }
+    let mut s1 = String::from("Hello");
+   
+update_function(&mut s1);
+
+}
+fn update_function(s1: &mut String){
+    s1.push_str(" World");
+    println!("{}",s1);
 }
