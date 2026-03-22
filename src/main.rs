@@ -73,13 +73,36 @@
 // }
 
 
-fn main(){
-    let mut s1 = String::from("Hello");
+// fn main(){
+//     let mut s1 = String::from("Hello");
    
-update_function(&mut s1);
+// update_function(&mut s1);
 
+// }
+// fn update_function(s1: &mut String){
+//     s1.push_str(" World");
+//     println!("{}",s1);
+// }
+
+
+
+
+
+// struct in rust 
+
+struct User {
+    active:bool,
+    name:String,
+    age:u8,
+    email:String
 }
-fn update_function(s1: &mut String){
-    s1.push_str(" World");
-    println!("{}",s1);
+
+fn main(){
+    let user1= User{
+        active:true,
+        name:String::from("Ismail Abbasi"),
+        age:19,
+        email:String:from("ismail.official295@gmail.com")
+    }
+    println("User name is {} and age is {}",user1.name,user1.age)
 }
