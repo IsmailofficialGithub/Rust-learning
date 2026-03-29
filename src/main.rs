@@ -90,19 +90,40 @@
 
 // struct in rust 
 
-struct User {
-    active:bool,
-    name:String,
-    age:u8,
-    email:String
+// struct User {
+//     active:bool,
+//     name:String,
+//     age:u8,
+//     email:String
+// }
+
+// fn main(){
+//     let user1= User{
+//         active:true,
+//         name:String::from("Ismail Abbasi"),
+//         age:19,
+//         email:String:from("ismail.official295@gmail.com")
+//     }
+//     println("User name is {} and age is {}",user1.name,user1.age)
+// }
+
+        //emuns in rust
+
+emun Shape {
+    Circle(f64),
+    Square(f64),
+    Rectangle(f64,f64),
 }
 
+// function to calculate area based on the shape
+
+fn calculate_area(shape:Shape)->f64{
+    return 0;
+};
+
 fn main(){
-    let user1= User{
-        active:true,
-        name:String::from("Ismail Abbasi"),
-        age:19,
-        email:String:from("ismail.official295@gmail.com")
-    }
-    println("User name is {} and age is {}",user1.name,user1.age)
+    let circle:Shape = Shape::Circle(5.0);
+    let square:Shape = Shape::Square(3.0);
+    let rectangle:Shape = Shape::Rectangle(5.0,2.0);
+
 }
