@@ -109,21 +109,35 @@
 
         //emuns in rust
 
-emun Shape {
-    Circle(f64),
-    Square(f64),
-    Rectangle(f64,f64),
-}
+// emun Shape {
+//     Circle(f64),
+//     Square(f64),
+//     Rectangle(f64,f64),
+// }
 
 // function to calculate area based on the shape
 
-fn calculate_area(shape:Shape)->f64{
-    return 0;
-};
+// fn calculate_area(shape:Shape)->f64{
+//     return 0;
+// };
 
+// fn main(){
+//     let circle:Shape = Shape::Circle(5.0);
+//     let square:Shape = Shape::Square(3.0);
+//     let rectangle:Shape = Shape::Rectangle(5.0,2.0);
+
+// }
+
+
+
+//Number that return ture of false based on number is even or not
 fn main(){
-    let circle:Shape = Shape::Circle(5.0);
-    let square:Shape = Shape::Square(3.0);
-    let rectangle:Shape = Shape::Rectangle(5.0,2.0);
-
+    let number:i32=4;
+    println!("{}",is_even(number))
+}
+fn is_even(number:i32)->bool{
+    if number % 2 == 0 {
+        return true
+    }
+    return false
 }
