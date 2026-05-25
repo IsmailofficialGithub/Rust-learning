@@ -1,21 +1,23 @@
+fn main(){
+    println!("Mutable structs in rust");
+    let mut car=MutStructCar{
+        brand:String::from("Toyota"),
+        year_of_manufactured:2001,
+        color:String::from("Black"),
+        engine:String::from("V8")
+    };
+    println!("{}",car.brand);
+    car.brand=String::from("BMW");
+    println!("{}",car.brand);
+    println!("{}",car.year_of_manufactured);
+    println!("{}",car.color);
+    println!("{}",car.engine);
 
-//syntax
-struct User {
-    name : String,
-    age : u8,
-    email:String
 }
 
-fn main(){
-println!("Hello , This is about structs in rust");
-
-let new_user= User{
-        name:String::from("Ismail Abbasi"),
-        age:19,
-        email:String::from("ismail.official295@gmail.com")
-};
-println!("{}",new_user.name);
-println!("{}",new_user.age);
-println!("{}",new_user.email);
-
+struct MutStructCar {
+    brand:String,
+    year_of_manufactured : u16,
+    color:String,
+    engine:String
 }
