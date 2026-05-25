@@ -18,7 +18,4 @@ println!("{}",new_user.name);
 println!("{}",new_user.age);
 println!("{}",new_user.email);
 
-
-
-
 }
