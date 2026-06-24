@@ -1,22 +1,11 @@
-fn main (){
-    let index=find_First_a(String::from("Cargorun"));
-        match index{
-            Some(value)=>println!("The index of first 'a' is {}",value),
-            None=>println!("There is no 'a' in the string"),
-        }
 
-}
 
-fn find_First_a (string:String)-> Option<i32> {
-    // string = Cargorun 
+use std::fs::read_to_string;
+fn main(){
+    let result:Result<String, std::io::Error> =read_to_string("a.txt");                            
 
-    for (index,char) in string.chars().enumerate()
-    {
-        if char =='a'
-        {
-            return Some (index as i32);
-        }
-    
+    match result{
+        Ok(data)=> println!("The content of the file is {}",data),
+        Err(error)=> println!("Error while reading the file: {:?}",error),
     }
-    None
 }
