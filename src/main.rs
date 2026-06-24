@@ -1,21 +1,22 @@
-enum Direction {
-    South,
-    East,
-    West,
-    North
+fn main (){
+    let index=find_First_a(String::from("Cargorun"));
+        match index{
+            Some(value)=>println!("The index of first 'a' is {}",value),
+            None=>println!("There is no 'a' in the string"),
+        }
+
 }
 
-fn main(){
-    let e_direction=Direction::South;
-    my_direction(e_direction);
-}
+fn find_First_a (string:String)-> Option<i32> {
+    // string = Cargorun 
 
-fn my_direction(direction:Direction){
-    match direction {
-        Direction::South => println!("My Direction is {}","South"),
-        Direction::East => println!("My Direction is {}","East"),
-        Direction::West => println!("My Direction is {}","West"),
-        Direction::North => println!("My Direction is {}","North")
+    for (index,char) in string.chars().enumerate()
+    {
+        if char =='a'
+        {
+            return Some (index as i32);
+        }
+    
     }
-    println!("Code compile successfully")
+    None
 }
