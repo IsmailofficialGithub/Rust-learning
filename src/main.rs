@@ -1,11 +1,34 @@
-// cannot borrow any other variable if one is already mut referance
-fn main(){
-  let  mut s1=String::from("Ismail");
+fn main() {
+    let mut vector = Vec::new();
+    vector.push(1);
+    vector.push(2);
+    vector.push(6);
 
-  let s2=&mut s1;
-
-  let s3=&s1;
-
-  println!("{} , {} , {}",s2,s2,s3);
+    println!("Vector is {:?}", even_filter2(&mut vector));
+    // println!("{:?}", even_filter(&vector));
 }
 
+//function that take vector and returns vector of even number only
+
+fn even_filter(vec: &Vec<i32>) -> Vec<i32> {
+    let mut new_vec = Vec::new();
+    for i in vec {
+        if i % 2 == 0 {
+            new_vec.push(*i);
+        }
+    }
+    return new_vec;
+}
+
+// approch 2
+
+fn even_filter2(vec: &mut Vec<i32>) {
+    let mut i = 0;
+    while i < vec.len() {
+        if vec[i] % 2 != 0 {
+            vec.remove(i);
+        } else {
+            i += 1;
+        }
+    }
+}
