@@ -25,3 +25,16 @@ fn some_function (s2:&mut String){
     println!("{}",s2);
     
 }
+
+
+// cannot borrow any other variable if one is already mut referance
+fn not_two_mut(){
+  let  mut s1=String::from("Ismail");
+
+  let s2=&mut s1;
+
+  let s3=&s1;
+
+  println!("{} , {} , {}",s2,s2,s3);
+}
+

@@ -1,12 +1,11 @@
-// &mut mutable borrowing
+// cannot borrow any other variable if one is already mut referance
 fn main(){
-    let mut s1 = String::from("Ismail");
-    some_function(&mut s1);
-    println!("{}",s1);  
+  let  mut s1=String::from("Ismail");
+
+  let s2=&mut s1;
+
+  let s3=&s1;
+
+  println!("{} , {} , {}",s2,s2,s3);
 }
 
-fn some_function (s2:&mut String){
-    s2.push_str("Abbasi");
-    println!("{}",s2);
-    
-}
