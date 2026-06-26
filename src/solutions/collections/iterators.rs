@@ -65,7 +65,7 @@
 // }
 
 
-                //Consuming adapters
+                //Consuming adapters sum
 // fn main (){
 //    let  v1=vec![1,2,3,4,5];
    
@@ -74,6 +74,42 @@
 //    println!("Sum of v1 Vector is {}",total);
 // }
 
+                //adaptor iterator map
+
+
+// fn main (){
+//    let  v1=vec![1,2,3,4,5];
+   
+//    let v1_iter = v1.iter();
+//    let v1_iter2 = v1_iter.map(|x|x+1);
+//    for i in v1_iter2 {
+//     println!("{}",i);
+//    }
+// }
+            //adaptor iterator filter
+
+// fn main (){
+//    let  v1=vec![1,2,3,4,5];
+//    
+//    let v1_iter = v1.iter();
+//    let v1_iter2 = v1_iter.filter(|x|*x%2==0);
+//    for i in v1_iter2 {
+    // println!("{}",i);
+//    }
+// }
+
+
+                //adaptor iterator filter,map,collect
+                
+fn main (){
+   let  v1=vec![1,2,3,4,5];
+   
+    let iter= v1.iter().filter(|x|*x%2==1).map(|x|x+1);
+    let v2:Vec<i32> =iter.collect();
+    println!("{:?}",v2);
+   
+}
+            
 
 // iter() [if you want immutable references to the inner variables and dont want to transfer ownership]
 
