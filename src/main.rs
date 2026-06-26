@@ -1,11 +1,15 @@
 fn main() {
-    let mut vector = Vec::new();
+    let vector_2=vec![2,3,4];// define a vector method 1
+    let mut vector = Vec::new(); // define a vector method 2
+
     vector.push(1);
     vector.push(2);
     vector.push(6);
 
     println!("Vector is {:?}", even_filter2(&mut vector));
     // println!("{:?}", even_filter(&vector));
+
+    println!("{:?}",vector_2);
 }
 
 //function that take vector and returns vector of even number only
