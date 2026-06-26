@@ -51,18 +51,28 @@
 // }
 
 
-        //ierators using into_iter()
+        //iterators using into_iter()
         
-fn main (){
-   let  v1=vec![1,2,3,4,5];
+// fn main (){
+//    let  v1=vec![1,2,3,4,5];
    
 
-    let into_iter=v1.into_iter();
-    for value in into_iter{
-        println!("{}",value);
-    }
+//     let into_iter=v1.into_iter();
+//     for value in into_iter{
+//         println!("{}",value);
+//     }
    
-}
+// }
+
+
+                //Consuming adapters
+// fn main (){
+//    let  v1=vec![1,2,3,4,5];
+   
+//    let v1_iter = v1.iter();
+//    let total:i32 = v1_iter.sum();
+//    println!("Sum of v1 Vector is {}",total);
+// }
 
 
 // iter() [if you want immutable references to the inner variables and dont want to transfer ownership]
