@@ -63,3 +63,10 @@ fn main (){
     }
    
 }
+
+
+// iter() [if you want immutable references to the inner variables and dont want to transfer ownership]
+
+// iter_Mut() [if you wnat mutable references to the inner variables and dont want to transfer ownership]
+
+// iterinto() [if you want to move the variable into the iterator and dont want to use it afterwards]
