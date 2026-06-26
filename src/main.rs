@@ -1,10 +1,10 @@
 
-
 fn main (){
-    let nums = vec![2,2,3,4,5,35,34];
-    let iter = nums.iter();
-    for value in iter {
-        println!("{}",value)
-    }
-
+   let mut v1=vec![1,2,3,4,5];
+   
+   let iter=v1.iter_mut();
+   for i in iter{
+    *i =*i+1;
+   }
+   println!("{:?}",v1);
 }
