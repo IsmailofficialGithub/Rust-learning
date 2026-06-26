@@ -6,5 +6,10 @@ fn main (){
     while let Some (val)=v1_iter.next(){
         println!("{}",val);
     }
+
+    let into_iter=v1.into_iter();
+    for value in into_iter{
+        println!("{}",value);
+    }
    
 }
