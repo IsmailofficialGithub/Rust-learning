@@ -1,14 +1,10 @@
+use std::thread;
+fn main (){
+    let v=vec![1,2,3];
+    let handle= thread::spawn(move|| {
+        println!("Here from a Vector {:?}",v);
+    });
+    println!("{:?}",v);
 
-struct User<'a> {
-    name:&'a str,
-}
-fn main(){
-    let user;
-    {    
-        let name = String::from("Ismail");
-            user=User{name:&name};
-    }
-
-        println!("{}",user.name);
-     
+    handle.join().unwrap();
 }
