@@ -1,10 +1,14 @@
-use tokio::time::{interval,Duration};
+use tokio::sync::mpsc;
 
 #[tokio::main]
-async fn main(){
-    let mut interval = interval(Duration::from_secs(1));
-    loop {
-        interval.tick().await;
-        println!("Tick");
+async fn main() {
+    let (tx, mut rx) = mpsc::channel(10);
+
+    tokio::spawn(async move {
+        tx.send("Hello").await.unwrap();
+    });
+
+    if let Some(msg) = rx.recv().await {
+        println!("{}", msg);
     }
 }
